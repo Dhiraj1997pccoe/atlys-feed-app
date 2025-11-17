@@ -1,0 +1,305 @@
+/* ===========================
+   GLOBAL
+=========================== */
+
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 0 16px;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===========================
+   SHARED ELEMENTS
+=========================== */
+.primary-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+.primary-btn:hover {
+  background: #3d68d9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(76,124,240,0.3);
+}
+
+.secondary-btn {
+  padding: 10px 18px;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  margin-top: 6px;
+}
+
+.secondary-btn:hover {
+  background: #ececec;
+  transform: translateY(-2px);
+}
+
+.text-link {
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 6px;
+  transition: 0.2s ease;
+}
+
+.text-link:hover {
+  color: #111827;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 14px;
+}
+
+.success {
+  color: #16a34a;
+  font-size: 14px;
+}
+
+/* ===========================
+   SIGN UP PAGE
+=========================== */
+.signup-container {
+  width: 450px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.signup-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.signup-form input {
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  outline: none;
+}
+
+.signup-form input:focus {
+  border-color: #2563eb;
+}
+
+/* ===========================
+   SIGN IN PAGE
+=========================== */
+.signin-container {
+  width: 450px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.signin-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.signin-form input {
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  outline: none;
+}
+
+.signin-form input:focus {
+  border-color: #2563eb;
+}
+
+/* ===========================
+   FEED EDITOR
+=========================== */
+.feed-editor {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  animation: fadeInUp 0.4s ease;
+}
+
+.feed-input {
+  width: 95%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #d6d6d6;
+  outline: none;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.feed-input:focus {
+  border-color: #4c7cf0;
+  box-shadow: 0 0 0 3px rgba(76, 124, 240, 0.2);
+}
+
+.feed-toolbar {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+/* ===========================
+   POSTS
+=========================== */
+.feed-post {
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+  margin-bottom: 16px;
+  animation: fadeInUp 0.35s ease;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.feed-actions {
+  display: flex;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #4c7cf0;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: 0.25s ease;
+}
+
+.action-btn:hover {
+  background: rgba(76, 124, 240, 0.1);
+}
+
+/* ===========================
+   MODAL
+=========================== */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeBackdrop 0.3s ease;
+}
+
+@keyframes fadeBackdrop {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal {
+  background: #fff;
+  padding: 28px;
+  border-radius: 14px;
+  width: 320px;
+  text-align: center;
+  animation: scaleIn 0.25s ease;
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-btns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 24px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.app-title {
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.header-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.header-btn.login {
+  background: #2563eb;
+  color: white;
+}
+
+.header-btn.logout {
+  background: #ef4444;
+  color: white;
+}
+
+.header-btn:hover {
+  opacity: 0.9;
+}
