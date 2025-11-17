@@ -5,7 +5,7 @@
   "homepage": "https://Dhiraj1997pccoe.github.io/atlys-feed-app/",
   "scripts": {
     "start": "parcel serve ./public/index.html",
-    "build": "parcel build ./public/index.html --public-url /code/dist/",
+    "build": "parcel build ./public/index.html --dist-dir dist --public-url ./",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
